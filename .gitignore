@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+# never commit patient data or images whose licence/provenance is unconfirmed
+*.nii
+*.nii.gz
+*.dcm
+data/
+# To ship a public demo volume later, confirm its licence, then add an explicit exception here, e.g.
+# !data/demo/
+# !data/demo/<file>.nii.gz
+# StudyForrest (ODC PDDL): allowed to ship once the exact T1w source/version is documented in the README table.
+!data/
+data/*
+!data/demo/
+data/demo/*
+!data/demo/sub-01_ses-forrestgump_T1w.nii.gz
+# MNI152 stays OUT of the repository until its source and redistribution licence are confirmed.

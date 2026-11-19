@@ -1,0 +1,55 @@
+{
+  "purpose": "regression reference for the synthetic phantom; not a validation benchmark",
+  "tool_version": "ThermoSEEG_3D_v3",
+  "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "input": {
+    "phantom_resolution_mm": 2.0,
+    "volume_shape": [
+      76,
+      94,
+      70
+    ],
+    "volume_sha256": "9a297c5523ac64da7961a04f992b31a10c0b4a64d4335f7cf08e5641672e6cf6",
+    "target_mm": [
+      -22.0,
+      4.0,
+      10.0
+    ],
+    "azimuth_deg": 180.0,
+    "elevation_deg": 10.0,
+    "entry_mm": [
+      -63.854,
+      4.0,
+      17.38
+    ]
+  },
+  "solver_parameters": {
+    "power_w": 3.0,
+    "exposure_s": 60.0,
+    "cooldown_s": 30.0,
+    "active_length_mm": 10.0,
+    "source_radius_mm": 4.0
+  },
+  "results": {
+    "Literature-order (default)": {
+      "max_temp_with_csf_c": 77.79,
+      "max_temp_without_csf_c": 78.08,
+      "max_csf_dT_reduction_c": 1.01,
+      "model_valid": true,
+      "ablation_volume_with_csf_mm3": 688.0,
+      "ablation_volume_without_csf_mm3": 688.0
+    },
+    "Team desktop parity": {
+      "max_temp_with_csf_c": 76.67,
+      "max_temp_without_csf_c": 77.15,
+      "max_csf_dT_reduction_c": 1.05,
+      "model_valid": true,
+      "ablation_volume_with_csf_mm3": 608.0,
+      "ablation_volume_without_csf_mm3": 672.0
+    }
+  }
+}
